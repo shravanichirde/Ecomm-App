@@ -32,7 +32,7 @@ jobs:
         uses : actions/checkout@v3          # github action to install nodejs
         with:
           node-version : {{matrix.node-version}} # refernce the node-version set above
-          cache : 'npm'           # command to install the node packages
+          cache : npm           # command to install the node packages
           cache-dependency-path :           # path to the package file
 
 
@@ -69,7 +69,7 @@ jobs:
         uses : actions/setup-node@v4
         with:
           node-version : {{matrix.node-version}}
-          cache : 'npm'        # command to install the node packages
+          cache : npm      # command to install the node packages
           cache-dependency-path : './frontend/package-lock.json'          # path to the package file
 
       - name : Install Dependencies
